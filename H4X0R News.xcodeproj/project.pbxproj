@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		493ADE4D25F40FE300E35520 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493ADE4C25F40FE300E35520 /* NetworkManager.swift */; };
+		496C7DBB25F66D08008B0705 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496C7DBA25F66D08008B0705 /* WebViewController.swift */; };
 		4977782225F029CB00032373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977782125F029CB00032373 /* AppDelegate.swift */; };
 		4977782425F029CB00032373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977782325F029CB00032373 /* SceneDelegate.swift */; };
 		4977782625F029CB00032373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977782525F029CB00032373 /* ViewController.swift */; };
 		4977782925F029CB00032373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4977782725F029CB00032373 /* Main.storyboard */; };
 		4977782B25F029CE00032373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4977782A25F029CE00032373 /* Assets.xcassets */; };
 		4977782E25F029CE00032373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4977782C25F029CE00032373 /* LaunchScreen.storyboard */; };
+		4977783D25F02B7700032373 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977783C25F02B7700032373 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		493ADE4C25F40FE300E35520 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		496C7DBA25F66D08008B0705 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4977781E25F029CB00032373 /* H4X0R News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H4X0R News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4977782125F029CB00032373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4977782325F029CB00032373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,8 @@
 		4977782A25F029CE00032373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4977782D25F029CE00032373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4977782F25F029CE00032373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4977783C25F02B7700032373 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		49C4696825F7D3AD006C9AC1 /* H4X0R News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4X0R News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +63,43 @@
 		4977782025F029CB00032373 /* H4X0R News */ = {
 			isa = PBXGroup;
 			children = (
+				49C4696825F7D3AD006C9AC1 /* H4X0R News.entitlements */,
 				4977782125F029CB00032373 /* AppDelegate.swift */,
 				4977782325F029CB00032373 /* SceneDelegate.swift */,
-				4977782525F029CB00032373 /* ViewController.swift */,
-				4977782725F029CB00032373 /* Main.storyboard */,
+				4977783B25F02B5B00032373 /* Model  */,
+				4977783725F029EF00032373 /* Controller */,
+				4977783925F02A0100032373 /* View */,
 				4977782A25F029CE00032373 /* Assets.xcassets */,
 				4977782C25F029CE00032373 /* LaunchScreen.storyboard */,
 				4977782F25F029CE00032373 /* Info.plist */,
 			);
 			path = "H4X0R News";
+			sourceTree = "<group>";
+		};
+		4977783725F029EF00032373 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4977782525F029CB00032373 /* ViewController.swift */,
+				496C7DBA25F66D08008B0705 /* WebViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4977783925F02A0100032373 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4977782725F029CB00032373 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4977783B25F02B5B00032373 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				4977783C25F02B7700032373 /* Post.swift */,
+				493ADE4C25F40FE300E35520 /* NetworkManager.swift */,
+			);
+			path = "Model ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +173,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4977782625F029CB00032373 /* ViewController.swift in Sources */,
+				496C7DBB25F66D08008B0705 /* WebViewController.swift in Sources */,
 				4977782225F029CB00032373 /* AppDelegate.swift in Sources */,
+				493ADE4D25F40FE300E35520 /* NetworkManager.swift in Sources */,
 				4977782425F029CB00032373 /* SceneDelegate.swift in Sources */,
+				4977783D25F02B7700032373 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M7Y9B34U7C;
 				INFOPLIST_FILE = "H4X0R News/Info.plist";
@@ -295,6 +334,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Uno.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "H4X0R News/H4X0R News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M7Y9B34U7C;
 				INFOPLIST_FILE = "H4X0R News/Info.plist";
@@ -314,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Uno.H4X0R-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
